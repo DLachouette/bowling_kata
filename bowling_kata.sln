@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bowling_kata", "bowling_kata.vcxproj", "{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release_test|x64 = Release_test|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Debug|x64.ActiveCfg = Debug|x64
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Debug|x64.Build.0 = Debug|x64
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Release_test|x64.ActiveCfg = Release_test|x64
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Release_test|x64.Build.0 = Release_test|x64
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Release|x64.ActiveCfg = Release|x64
+		{34B59EB8-048B-41A7-82AD-F6AAEDDA2897}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47E56092-CC14-4794-9C39-1AA04549EF53}
+	EndGlobalSection
+EndGlobal
