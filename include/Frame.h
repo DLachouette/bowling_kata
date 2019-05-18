@@ -29,7 +29,10 @@ namespace bowling {
 		/// <summary>return the number of pins down at the first try</summary>
 		/// <returns>the pins down at first try<returns>
 		int getFirstTryScore();
-
+		
+		/// <summary>return the number of pins down at the second try</summary>
+		/// <returns>the pins down at second try<returns>
+		int getSecondTryScore();
 
 		/// <summary>virtual method that set the data of the class based on the given status</summary>
 		/// <param name='s'>the string used to set the data</param>

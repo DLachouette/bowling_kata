@@ -62,10 +62,12 @@
     <ClInclude Include="include\bowling.h" />
     <ClInclude Include="include\Frame.h" />
     <ClInclude Include="include\IBloc.h" />
+    <ClInclude Include="include\Line.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\bowling.cpp" />
     <ClCompile Include="src\Frame.cpp" />
+    <ClCompile Include="src\Line.cpp" />
     <ClCompile Include="src\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_test|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -74,6 +76,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="test\frame_tests.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\line_tests.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

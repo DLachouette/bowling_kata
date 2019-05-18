@@ -21,6 +21,9 @@
     <ClInclude Include="include\Frame.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\Line.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -40,6 +43,12 @@
     </ClCompile>
     <ClCompile Include="src\Frame.cpp">
       <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Line.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\line_tests.cpp">
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

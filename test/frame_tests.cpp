@@ -162,41 +162,44 @@ TEST(BowlingFrame, FRAME_FIRST_TRY_SCORE)
 
 	frame.setFromString("X");
 	EXPECT_EQ(frame.getFirstTryScore(), 10)
-		<< "Frame::getFrameScore() : input \"X\" for strike should score 10";
+		<< "Frame::getFirstTryScore() : input \"X\" for strike should score 10";
 
 	frame.setFromString("1/");
 	EXPECT_EQ(frame.getFirstTryScore(), 1)
-		<< "Frame::getFrameScore() : input \"1/\" for spare should score 1";
+		<< "Frame::getFirstTryScore() : input \"1/\" for spare should score 1";
 
 	frame.setFromString("14");
 	EXPECT_EQ(frame.getFirstTryScore(), 1)
-		<< "Frame::getFrameScore() : input \"15\" should score 1";
+		<< "Frame::getFirstTryScore() : input \"15\" should score 1";
 
 	frame.setFromString("1-");
 	EXPECT_EQ(frame.getFirstTryScore(), 1)
-		<< "Frame::getFrameScore() : input \"1-\" with a miss should score 1";
+		<< "Frame::getFirstTryScore() : input \"1-\" with a miss should score 1";
 
 	frame.setFromString("-5");
 	EXPECT_EQ(frame.getFirstTryScore(), 0)
-		<< "Frame::getFrameScore() : input \"-5\" with a miss should score 0";
+		<< "Frame::getFirstTryScore() : input \"-5\" with a miss should score 0";
 }
 
-TEST(BowlingFrame, FRAME_ADDITIONAL_SCORING)
+TEST(BowlingFrame, FRAME_SECOND_TRY_SCORE)
 {
 	bowling::Frame frame;
 
-	frame.setFromString("X", true);
-	EXPECT_EQ(frame.getFirstTryScore(),10)
-			<< "Frame::getFrameScore() : input \"X\" for strike should score -2";
+	frame.setFromString("1/");
+	EXPECT_EQ(frame.getSecondTryScore(), 9)
+		<< "Frame::getFirstTryScore() : input \"1/\" for spare should score 9";
 
-	frame.setFromString("1", true);
-	EXPECT_EQ(frame.getFirstTryScore(),1)
-			<< "Frame::getFrameScore() : input \"1\" for spare should score 1";
+	frame.setFromString("14");
+	EXPECT_EQ(frame.getSecondTryScore(), 4)
+		<< "Frame::getFirstTryScore() : input \"15\" should score 4";
 
-	frame.setFromString("-", true);
-	EXPECT_EQ(frame.getFirstTryScore(),0)
-			<< "Frame::getFrameScore() : input \"-\" should score 0";
+	frame.setFromString("1-");
+	EXPECT_EQ(frame.getSecondTryScore(), 0)
+		<< "Frame::getFirstTryScore() : input \"1-\" with a miss should score 0";
 
+	frame.setFromString("-5");
+	EXPECT_EQ(frame.getSecondTryScore(), 5)
+		<< "Frame::getFirstTryScore() : input \"-5\" with a miss should score 5";
 }
 
 #endif /* FRAME_TESTS_CPP_ */

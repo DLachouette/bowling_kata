@@ -34,6 +34,11 @@ namespace bowling {
 		return results.first;
 	}
 
+	int Frame::getSecondTryScore()
+	{
+		return results.second;
+	}
+
 	bool Frame::setFromString(const string& s, const bool& add)
 	{
 		additional = add;
