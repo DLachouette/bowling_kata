@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IBloc.h"
+#include <iostream>
 #include <utility>
 
 namespace bowling {
@@ -41,6 +42,12 @@ namespace bowling {
 		/// the second char only could be '/' which means Spare then the number of knocked pins at the second try is 10 - "first try"
 		/// the sum of the fallen pins should be < 10 (except for the Strike and Spare case)
 		bool setFromString(const string& s,const bool& add=false);
+
+		///<summary>streaming out operator</summary>
+		/// <param name='os'>stream to input</param>
+		/// <param name='f'>the frame to stream</param>
+		/// <returns>output stream</returns>
+		friend ostream& operator<<(ostream& os, const Frame& f);
 	private:
 		/// <summary>first and second try result: the number of knocked down pins</summary>
 		pair<int, int> results;
