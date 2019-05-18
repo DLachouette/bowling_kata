@@ -46,11 +46,21 @@ TEST(BowlingLine, GOOD_LINE_DEFINITION)
 	// good example 1 full of strike
 	EXPECT_TRUE(line.setFromString("XXXXXXXXXXXX")) 
 		<< "Line::setFromString : line full of strikes should be OK";
+	
 	// good example 2
 	EXPECT_TRUE(line.setFromString("9-9-9-9-9-9-9-9-9-9-")) 
 		<< "Line::setFromString : line full of 'nine,miss' strikes should be OK";
+
 	// good example 3 with a spare
 	EXPECT_TRUE(line.setFromString("5/5/5/5/5/5/5/5/5/5/5")) 
+		<< "Line::setFromString : line full of spares should be OK";
+
+	// good example 4 End with a Strike 
+	EXPECT_TRUE(line.setFromString("5/5/5/5/5/5/5/5/5/X53"))
+		<< "Line::setFromString : line full of spares should be OK";
+
+	// good example 5 a Strike in the middle
+	EXPECT_TRUE(line.setFromString("5/5/5/X5/5/5/5/5/12"))
 		<< "Line::setFromString : line full of spares should be OK";
 
 }
@@ -70,6 +80,14 @@ TEST(BowlingLine, LINE_SCORING)
 	line.setFromString("5/5/5/5/5/5/5/5/5/5/5");
 	EXPECT_EQ(line.getLineScore(),150) 
 		<< "Line::getLineScore() : input \"5/5/5/5/5/5/5/5/5/5/5\" should score 150";
+
+	line.setFromString("5/5/5/5/5/5/5/5/5/X53");
+	EXPECT_EQ(line.getLineScore(), 158)
+		<< "Line::getLineScore() : input \"5/5/5/5/5/5/5/5/5/X53\" should score 158";
+
+	line.setFromString("5/5/5/X5/5/5/5/5/12");
+	EXPECT_EQ(line.getLineScore(), 144)
+		<< "Line::getLineScore() : input \"5/5/5/X5/5/5/5/5/12\" should score 144";
 
 }
 

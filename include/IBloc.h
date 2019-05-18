@@ -11,6 +11,8 @@ namespace bowling {
 		BadStringLength,
 		BadFrameFirstChar,
 		BadFrameSecondChar,
+		BadFrame,
+		BadLineSize,
 	};
 
 	/// <summary>abstract class with the basic methods for the other class of the application</summary>

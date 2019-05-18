@@ -17,7 +17,7 @@ namespace bowling {
 
 		/// <summary>compute the score for the given line<summary>
 		/// <returns>the score of the line</returns>
-		int getLineScore()const;
+		int getLineScore();
 
 		/// <summary> defines the line results based on the input string</summary>
 		/// <param name='s'>the input string</param>

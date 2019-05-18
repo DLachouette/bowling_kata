@@ -23,15 +23,15 @@ namespace bowling {
 		~Frame();
 
 		/// <summary>compute the score for the frame</summary>
-		/// <returns>-2 for a Strike, -1 for a Spare, else a positive number for the score<returns>
+		/// <returns>-2 for a Strike, -1 for a Spare, else a positive number for the score</returns>
 		int getFrameScore();
 
 		/// <summary>return the number of pins down at the first try</summary>
-		/// <returns>the pins down at first try<returns>
+		/// <returns>the pins down at first try</returns>
 		int getFirstTryScore();
 		
 		/// <summary>return the number of pins down at the second try</summary>
-		/// <returns>the pins down at second try<returns>
+		/// <returns>the pins down at second try</returns>
 		int getSecondTryScore();
 
 		/// <summary>virtual method that set the data of the class based on the given status</summary>
