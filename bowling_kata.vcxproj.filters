@@ -15,6 +15,12 @@
     <ClInclude Include="include\bowling.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\IBloc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Frame.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -28,6 +34,12 @@
     </ClCompile>
     <ClCompile Include="test\bowling_test.cpp">
       <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\frame_tests.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Frame.cpp">
+      <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
