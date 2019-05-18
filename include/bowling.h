@@ -9,19 +9,23 @@ namespace bowling {
 	public:
 		/// <summary>Default constructor</summary>
 		Bowling();
+
 		/// <summary>constructor with program argument</summary>
-		/// <param name='argc'>number of argument</param>
+		/// <param name='argc'>number of arguments</param>
 		/// <param name='argv'>list of arguments</param>
 		Bowling(int argc, char** argv);
+
 		/// <summary>Destructor</summary>
 		~Bowling();
+
 		/// <summary>Main program execution</summary>
 		void run();
 	private:
 		/// <summary>Parse the input parameters</summary>
-		/// <param name='argc'>number of argument</param>
+		/// <param name='argc'>number of arguments</param>
 		/// <param name='argv'>list of arguments</param>
 		void parseInput(int argc,char** argv);
+
 		/// <summary>Print a help message in the console</summary>
 		void printHelp();
 
